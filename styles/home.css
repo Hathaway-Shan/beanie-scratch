@@ -1,1 +1,14 @@
 /* CSS for home page (index.html) */
+#beanie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    gap: 20px;
+    margin: 25px;
+    background-color: burlywood;
+}
+
+.beanie-card img {
+    width: 120px;
+    object-fit: cover;
+}

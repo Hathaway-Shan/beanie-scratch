@@ -2,7 +2,6 @@
 export default function createBeanieList(root) {
     return ({ beanies }) => {
         root.innerHTML = '';
-        console.log(beanies);
         for (let beanie of beanies) {
             const li = BeanieCard({ beanie });
             root.append(li);
@@ -16,13 +15,15 @@ export function BeanieCard({ beanie }) {
     const a = document.createElement('a');
     const img = document.createElement('img');
     const p = document.createElement('p');
-    //adds class to the creates li element
-    li.classList.add = ('beanie-card');
+    //adds class to the created li element
+    a.classList.add('beanie-card');
     //point the created element contents towards the information on supabase
     p.textContent = beanie.title;
     img.src = beanie.image;
     //this href n
-    a.href = beanie.link;
+
+    //goes to newPage puts id into HTTP path to access id info later
+    a.href = `./newPage/?id=${beanie.id}`;
 
     a.append(p, img);
     li.append(a);

@@ -1,18 +1,12 @@
 // import services and utilities
 import { getBeanies } from './services/fetch-beanie.js';
+
 // import component creators
 import createBeanieList from './components/BeanieList.js';
+
 // declare state variables
-let beanies = [
-    // { title: 'jimmy', id: 2, image: './assets/dad.png' },
-    // { title: 'jimmy', id: 2, image: './assets/dad.png' },
-    // { title: 'jimmy', id: 2, image: './assets/dad.png' },
-    // { title: 'jimmy', id: 2, image: './assets/dad.png' },
-    // { title: 'jimmy', id: 2, image: './assets/dad.png' },
-    // { title: 'jimmy', id: 2, image: './assets/dad.png' },
-    // { title: 'jimmy', id: 2, image: './assets/dad.png' },
-    // { title: 'jimmy', id: 2, image: './assets/dad.png' },
-];
+let beanies = [];
+
 // write handler functions
 async function handlePageLoad() {
     beanies = await getBeanies();
@@ -21,6 +15,7 @@ async function handlePageLoad() {
 // Create each component: 
 const BeanieList = createBeanieList(document.querySelector('#beanie-list'));
 // - pass in the root element via querySelector
+
 // - pass any needed handler functions as properties of an actions object 
 
 // Roll-up display function that renders (calls with state) each component
