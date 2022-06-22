@@ -2,7 +2,8 @@
 export default function createBeanieList(root) {
     return ({ beanies }) => {
         root.innerHTML = '';
-        for (const beanie of beanies) {
+        console.log(beanies);
+        for (let beanie of beanies) {
             const li = BeanieCard({ beanie });
             root.append(li);
         }
