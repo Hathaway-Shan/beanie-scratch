@@ -1,9 +1,18 @@
 // import services and utilities
 
 // import component creators
-import createBeanieList from './componets/BeanieList.js';
+import createBeanieList from './components/BeanieList.js';
 // declare state variables
-let beanies = [];
+let beanies = [
+    { title: 'jimmy', id: 2, image: './assets/dad.png' },
+    { title: 'jimmy', id: 2, image: './assets/dad.png' },
+    { title: 'jimmy', id: 2, image: './assets/dad.png' },
+    { title: 'jimmy', id: 2, image: './assets/dad.png' },
+    { title: 'jimmy', id: 2, image: './assets/dad.png' },
+    { title: 'jimmy', id: 2, image: './assets/dad.png' },
+    { title: 'jimmy', id: 2, image: './assets/dad.png' },
+    { title: 'jimmy', id: 2, image: './assets/dad.png' },
+];
 // write handler functions
 
 // Create each component: 

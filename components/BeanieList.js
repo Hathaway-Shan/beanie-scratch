@@ -20,6 +20,7 @@ export function BeanieCard({ beanie }) {
     //point the created element contents towards the information on supabase
     p.textContent = beanie.title;
     img.src = beanie.image;
+    //this href n
     a.href = beanie.link;
 
     a.append(p, img);
