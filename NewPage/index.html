@@ -12,7 +12,8 @@
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/home.css" />
+    <!-- specify it's own stylesheet -->
+    <link rel="stylesheet" href="/styles/detail.css" />
     <!-- connect to supabase in the head -->
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <title>Web MVC UI</title>
@@ -20,19 +21,31 @@
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
-        <h1>All these Beanie Boys</h1>
+        <!-- makes image at top of page clickable to go back a level -->
+        <a href="../index.html"><img src="/assets/html_css_js.png"></a>
+        <h1 id="page-name">This Beanie Boy</h1>
     </header>
 
     <main>
-        <!-- display and list element for functions -->
-        <h2 id="box">What's in the box?</h2>
-        <ul id="beanie-list"></ul>
+        <div id="beanie-detail">
+            <h2 class="beanie-name"></h2>
+            <img class="beanie-img">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <span>You can learn more:<a id="link">here</a></span>
+        </div>
     </main>
 
-    <footer>&copy;2022 Aspiring Software Developer</footer>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="./CloserLook.js"></script>
 </body>
 
 </html>
