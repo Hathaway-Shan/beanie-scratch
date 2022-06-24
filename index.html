@@ -25,9 +25,61 @@
     </header>
 
     <main>
+        <section id="search" class="box">
+            <h2 id="box">Like if NFT's were plush!</h2>
+            <form id="filter">
+
+                <label>
+                    Color:
+                    <input name="color">
+                </label>
+
+                <label>Astrology(for some reason):
+                    <select name="sunSign">
+                        <option value="aries">Aries</option>
+                        <option value="taurus">Taurus</option>
+                        <option value="gemini">Gemini</option>
+                        <option value="cancer">Cancer</option>
+                        <option value="leo">Leo</option>
+                        <option value="libra">Libra</option>
+                        <option value="virgo">Virgo</option>
+                        <option value="scorpio">Scorpio</option>
+                        <option value="sagittarius">Sagittarius</option>
+                        <option value="capricorn">Capricorn</option>
+                        <option value="aquarius">Aquarius</option>
+                        <option value="pisces">Pisces</option>
+                    </select>
+                </label>
+
+                <label>
+                    <button id="button">🔍 Search</button>
+                </label>
+
+            </form>
+        </section>
+
+        <section id="paging" class="box">
+
+            <label>
+                Per Page:
+                <select>
+                    <option value="5">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </label>
+
+            <span class="page-info"></span>
+            <button>&lt; Prev</button>
+            <button>Next &gt;</button>
+
+        </section>
         <!-- display and list element for functions -->
-        <h2 id="box">What's in the box?</h2>
-        <ul id="beanie-list"></ul>
+
+        <section>
+            <ul id="beanie-list"></ul>
+        </section>
+
     </main>
 
     <footer>&copy;2022 Aspiring Software Developer</footer>
