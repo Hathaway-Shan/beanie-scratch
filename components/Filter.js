@@ -6,11 +6,13 @@ export default function createFilter(form, { handleFilter }) {
         e.preventDefault();
         const formData = new FormData(form);
 
-        const color = formData.get('title');
-        const astroSign = formData.get('astroSign');
+        const dog = {
+            color: formData.get('color'),
+            astroSign: formData.get('astroSign'),
+        };
 
         handleFilter(
-            { color, astroSign }
+            { dog }
         );
     });
 

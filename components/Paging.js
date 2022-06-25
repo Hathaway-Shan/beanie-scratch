@@ -1,7 +1,8 @@
 export default function createPaging(root, { handlePaging }) {
+
     const selectSize = root.querySelector('select');
     const pageInfo = root.querySelector('.page-info');
-    const [prev, next] = root.querySelector('button');
+    const [prev, next] = root.querySelectorAll('button');
 
 
     prev.addEventListener('click', () => {
@@ -12,7 +13,7 @@ export default function createPaging(root, { handlePaging }) {
         handlePaging(1, selectSize.value);
     });
 
-    selectSize.addEventListener('click', () => {
+    selectSize.addEventListener('change', () => {
         handlePaging(0, selectSize.value);
     });
 
