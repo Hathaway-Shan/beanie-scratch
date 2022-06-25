@@ -6,13 +6,15 @@ export default function createFilter(form, { handleFilter }) {
         e.preventDefault();
         const formData = new FormData(form);
 
-        const dog = {
+        //because we made color and astroSign into an object it has to be
+        //destructured in the handleFilter function of app.js
+        const beanieProps = {
             color: formData.get('color'),
-            astroSign: formData.get('astroSign'),
+            astroSign: formData.get('sunSign'),
         };
 
         handleFilter(
-            { dog }
+            { beanieProps }
         );
     });
 

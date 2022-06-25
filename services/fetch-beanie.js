@@ -7,7 +7,7 @@ export async function getBeanies(color, astroSign, start, end) {
     let query = client
         .from('beanie_babies')
         .select(`id, title, color, astroSign, image`, { count: 'exact' });
-    console.log(color);
+
     if (color) {
         //.match takes an object with a complete value pair and looks for that
         //in the table
@@ -19,9 +19,10 @@ export async function getBeanies(color, astroSign, start, end) {
 
     query = query.range(start, end);
     const response = await query;
+
     //get table info from client
     //name of table is beanie_babies in rubric
-    // const response = await client.from('beanie_babies').select(`title, id, image`);
+
     //return response
     return response;
 }

@@ -19,13 +19,15 @@ async function handlePageLoad() {
 
     color = params.get('color') || '';
     astroSign = params.get('astroSign') || '';
+
     //grabs page from url params on 23 24 says if this exists set page equal to it
     //if not set it equal to one
     const pageParam = Number(params.get('page'));
     page = pageParam ? pageParam : 1;
 
-    const pageSizeParam = Number(params.get('pageSize'));
-    pageSize = pageSizeParam ? pageSizeParam : 10;
+    // const pageSizeParam = Number(params.get('pageSize'));
+    // pageSize = pageSizeParam ? pageSizeParam : 10;
+    pageSize = Number(params.get('pageSize')) || 10;
 
     //calculate start and end of range from page and Pagesize
     const start = (page - 1) * pageSize;
@@ -38,14 +40,13 @@ async function handlePageLoad() {
     display();
 }
 
-function handleFilter(dog) {
+function handleFilter({ beanieProps }) {
     //sets params equal to the value read in the url from the server
     const params = new URLSearchParams(window.location.search);
 
     //takes form inputs from user and changes the information gotten from server 
-    params.set('color', dog.color);
-    console.log(color);
-    params.set('astroSign', dog.astroSign);
+    params.set('color', beanieProps.color);
+    params.set('astroSign', beanieProps.astroSign);
     params.set('page', 1);
 
     //sets these new params as a string in the URL 
@@ -56,6 +57,7 @@ function handlePaging(change, size) {
     const params = new URLSearchParams(window.location.search);
 
     if (Number(size) === pageSize) {
+
         page = Math.max(1, page + change);
     }
     else {
@@ -65,7 +67,6 @@ function handlePaging(change, size) {
     //string to a number in the block
     params.set('page', page);
     params.set('pageSize', size);
-
     window.location.search = params.toString();
 }
 
