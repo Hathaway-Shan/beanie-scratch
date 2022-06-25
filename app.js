@@ -25,8 +25,7 @@ async function handlePageLoad() {
     const pageParam = Number(params.get('page'));
     page = pageParam ? pageParam : 1;
 
-    // const pageSizeParam = Number(params.get('pageSize'));
-    // pageSize = pageSizeParam ? pageSizeParam : 10;
+    //this was refactored trying to get next page button to work could probably be same as 25 26 now
     pageSize = Number(params.get('pageSize')) || 10;
 
     //calculate start and end of range from page and Pagesize
@@ -87,7 +86,7 @@ function display() {
     BeanieList({ beanies });
 }
 
+//call display on page load
 handlePageLoad();
 
-// Call display on page load
-// display();
+
